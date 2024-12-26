@@ -4,6 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>04_표관련태그</title>
+		
+		<!-- style태그 : css(html 꾸미기) 코드를 작성하는 태그 -->
+		<style>
+			/* css주석 */
+			/* 문서 내에서 thead 태그를 모두 찾아 선택 */
+			table{
+				text-align: center;
+			}
+			thead{
+				background-color: yellow;
+			}
+			tbody{
+				background-color: skyblue;
+			}
+			tfoot{
+				background-color: magenta;
+			}
+		</style>
 </head>
 <body>
 	<ol>
@@ -129,6 +147,41 @@
 			<td>유리</td>
 			<td>F</td>
 		</tr>
+	</table>
+
+	<hr>
+
+	<h3>테이블 연습 3</h3>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>이름</th>
+				<th>나이</th>
+				<th>주소</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>홍길동</th>
+				<th>25세</th>
+				<th rowspan="3">서울시 중구</th>
+			</tr>
+			<tr>
+				<th>김미영</th>
+				<th>23세</th>
+			</tr>
+			<tr>
+				<th>박철수</th>
+				<th>32세</th>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<th>인원 수</th>
+				<td colspan="2">3명</td>
+			</tr>
+		</tfoot>
+
 	</table>
 </body>
 </html>
