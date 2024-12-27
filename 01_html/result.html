@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>결과페이지</title>
+</head>
+<body>
+  <h1>결과 페이지</h1>
+<!-- 제출된 값을 console에 출력하는 js 코드 -->
+  <script>
+    const params = new URLSearchParams(location.search);
+
+    params.forEach((value, key)=>{
+      console.log("key: ",key)
+      console.log("value: ",value)
+    })
+  </script>
+
+  
+</body>
+</html>

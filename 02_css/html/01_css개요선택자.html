@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01_css 개요, 선택자 1</title>
+
+  <!-- css를 작성하는 태그 -->
+  <style>
+    li{
+      font-weight: bold;/* 글자 굵기: 두껍게 */
+      font-style: italic;/* 글자 스타일: 기울이기 */
+    }
+
+    #test1{
+      color: violet;
+    }
+
+    #test2{
+      font-size: 24px;
+    }
+
+    #test3{
+      font-family: '휴먼 바탕체';
+    }
+    /* class(.)선택자 */
+    .important{
+      color: red;
+      font-size: 20px;
+      text-decoration: underline;
+    }
+
+    .bg-red   {background-color: red;}
+    .bg-yellow{background-color: yellow;}
+    .bg-pink  {background-color: pink;}
+    .bg-green {background-color: green;}
+    .bg-gray  {background-color: grey;}
+
+    /* 모든 요소 선택자 */
+    *{font-family:'궁서체'}
+  </style>
+</head>
+<body>
+  <h1>css(Cascading Style sheets)</h1>
+  <pre>
+    Cascading :종속 여러 단으로 된  폭포
+    [CSS]
+    * 마크업 언어(html)가 실제 화면에 표시되는 방법을
+      기술한 언어
+
+    * 하나의 요소에 여러 CSS 코드를 겹쳐서 원하는 스타일을 표시
+  </pre>
+  
+  <hr>
+
+  <pre>
+    [용어 정리]
+    id(식별자) 속성
+      - 하나의 HTML 파일 내에 딱 1개만 존재핳 수 있음(중복 X)
+        ->요소를 구분하는 속성
+      
+        -id를 나타내는 기호 : #
+
+    class(모임) 속성
+      - 요소 하나가 여러 모임(class)에 참여 가능
+        -> 같은 class를 가지는 요소가 존재할 수 있다
+      
+      -class를 나타내는 기호 : .
+  </pre>
+
+  <hr>
+
+  <h1>CSS 선택자(Selector)</h1>
+  <pre>
+    - html 파일 내에서 스타일을 적용하고 싶은
+      요소를 선택하는 방법
+  </pre>
+
+  <h3>태그 선택자</h3>
+  <pre>
+    - 같은 태그를 모두 찾아서 선택
+
+    [작성법]
+    태그명{ css코드; }
+  </pre>
+
+  <ul>
+    <li>테스트1</li>
+    <li>테스트2</li>
+    <li>테스트3</li>
+    <li>테스트4</li>
+    <li>테스트5</li>
+  </ul>
+
+  <hr>
+  
+  <h3>ID(#)선택자</h3>
+  <pre>
+    -HTML 문서 내에 같은 id를 가지는 요소를 선택
+    [작성법]
+    #id속성값{css코드;}
+  </pre>
+  <ul>
+    <li id="test1">테스트1</li>
+    <li id="test2">테스트2</li>
+    <li id="test3">테스트3</li>
+  </ul>
+
+  <hr>
+
+  <h3>class(.) 선택자</h3>
+  <pre>
+    -HTML 문서 내에서 같은 class 속성값을 지니는 요소를 모두 선택
+
+    [작성법]
+    .class속성값 { css코드; }
+  </pre>
+
+  <p class="important bg-yellow">중요한 내용!!!</p>
+  <p class="bg-pink">그냥 글</p>
+  <p class="important bg-gray">중요한 내용</p>
+
+  <hr>
+
+  <h3>모든 요소(*,asterisk) 선택자</h3>
+
+  <pre>
+    1) 단독사용
+      ->현재 페이지 모든 요소 선택
+    2) 다른 선택자와 혼용
+      ->선택된 요소의  모든 자식/후손/형제를 선택
+  </pre>
+</body>
+</html>
