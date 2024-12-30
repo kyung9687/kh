@@ -130,6 +130,72 @@
   <br>
   <input type="text" class="input-3" disabled>
 
+  <hr>
+  <h3>동위 선택자(+, ~)</h3>
 
+  <pre>
+    동위(동등한 위치 == 형제 관계)
+    다음(뒤, 아래에 위치한 요소를 선택하는 선택자)
+
+    1) A 바로 다음에 위치한 요소를 하나 선택(+)
+    <code>
+      A선택자 +B선택자 {css 코드;}
+    </code>
+    
+    2) A 바로 다음에 위치한 모든  B요소를 하나 선택(~)
+    <code>
+      A선택자 +B선택자 {css 코드;}
+    </code>
+  </pre>
+  
+  <div id="div1">1번 입니다</div>
+
+  <div>2번 입니다</div>
+
+  <div id="div3">3번 입니다</div>
+
+  <div id="div4">4번 입니다</div>
+
+  <p>p 태그 입니다</p>
+
+  <div>5번 입니다</div>
+
+  <hr>
+  <h3>radio, checkbox 스타일 변경하기</h3>
+
+  <input type="radio" name="radioDeco">
+  <input type="radio" name="radioDeco">
+  <input type="radio" name="radioDeco">
+
+  <hr>
+
+  <input type="checkbox" name="checkDeco">
+  <input type="checkbox" name="checkDeco">
+  <input type="checkbox" name="checkDeco">
+
+  <hr>
+  <h3>이미지를 이용해서 체크박스 꾸미기</h3>
+
+  <pre>
+    [준비물]
+    - input type="checkbox"
+    - label 태그 : input의 제목을 지정하는 태그
+                    클릭시 연결된  input이 클릭되는 효과
+    - :checked (상태 선택자)
+    - +(동위 선택자, 형제 요소 1개 선택)
+    - 체크박스 이미지
+  </pre>
+
+  <label class="check-test">
+    <input type="checkbox">
+    <div></div>
+  </label>
+  <label class="check-test">
+    <input type="checkbox">
+    <div></div>
+  </label>  <label class="check-test">
+    <input type="checkbox">
+    <div></div>
+  </label>
 </body>
 </html>

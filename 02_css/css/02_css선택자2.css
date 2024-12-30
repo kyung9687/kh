@@ -104,3 +104,100 @@ input[name=checkGroup]:checked{
 .input-3:disabled{
   background-color: salmon;
 }
+
+/* 동위 선택자 */
+/* A + B : A 바로 뒤에 B 형제 요소 1개 선택 */
+#div1 + div{/*  id 가 "dic1"인 요소 바로 뒤 div 요소 선택  */
+  background-color: #AF47D2;
+}
+
+#div4 + p{
+  background-color: #cccccc;
+}
+
+/* A ~ B : A 다음에 존재 하는 모든 B 형제 요소 선택 */
+#div3 ~ div{
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+#div1 ~ div{
+  color: red;
+}
+
+input[name=radioDeco]{
+  /* 브라우저 기본 스타일 제거 */
+  appearance: none;
+
+  width: 20px;
+  height: 20px;
+
+  border: 2px solid #cccccc;
+
+  /* 모서리 곡률 지정 */
+  border-radius: 50%;
+
+  background-color: white;
+  
+  /* 마우스 손가락 모양 */
+  cursor: pointer;
+}
+
+input[name=radioDeco]:checked{
+  background-color: orange;
+  border-color: orange;
+}
+input[name=checkDeco]{
+  /* 브라우저 기본 스타일 제거 */
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #cccccc;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+/* 체크된 경우 */
+input[name=checkDeco]:checked{
+  background-color: green;
+  border-color: green;
+  position: relative; /* 위치 기준 */
+}
+
+
+/* 체크된 요소에 */
+input[name=checkDeco]:checked::before{
+  content: '✔';
+  color: white;
+  position: absolute;
+  left: 2px;
+  bottom: -2px;
+  font-size: 16px;
+}
+
+/* 이미지를 이용해서 checkbox 꾸미기 */
+
+/* 감싸고 있는 label */
+.check-test{
+  width: 20px;
+  height: 20px;
+  border: 2px solid #cccccc;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 5px;
+
+}
+
+.check-test >input[type="checkbox"]{
+  display: none;
+}
+
+/* 체크된 체크박스 다음에 존재하는 div 선택 */
+.check-test >input[type="checkbox"]:checked + div{
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/checkbox.png');
+  background-size: cover;
+}

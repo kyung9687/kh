@@ -1,0 +1,73 @@
+/* 일반 구조 선택자(위치기준) */
+
+/* first-child -> 첫 번째 위치한 요소가 맞으면 선택  */
+
+#test1 > p:first-child{
+  background-color: red;
+  color: white;
+}
+
+
+
+/* first-child -> 마지막 위치한 요소가 맞으면 선택  */
+
+#test1 > p:last-child{
+  background-color: blue;
+  color: white;
+}
+
+/*  #test 1인 요소의 자식 중 3번쨰 위치한 자식이 p 태그가 맞을 경우 선택 */
+#test1 > p:nth-child(3){
+  background-color: orange;
+}
+
+/* n: 0 이상의 양의 정수 (0,1,2,3...) */
+#test1 > p:nth-child(2n){
+  background-color: pink;
+}
+
+/* nth-last-child(숫자) -> 뒤에서 n번째 위치한 요소가 맞으면 선택 */
+#test1 > p:nth-last-child(4){
+  font-size: 30px;
+}
+
+/* 형태 구조 선택자 */
+
+/* :first-of-type
+  -> 선택된 형제 요소중 첫 번째 선택
+*/
+
+#test2 > p:first-of-type{
+  background-color: yellowgreen;
+}
+
+/* :last-of-type
+  -> 선택된 형제 요소중 마지막 선택
+*/
+
+#test2 > p:last-of-type{
+  background-color: skyblue;
+}
+
+/* :nth-of-type
+  -> 선택된 형제 요소중 n(0,1,2,....) 번째 선택
+*/
+
+#test2 > p:nth-of-type(2n+1){
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+/* :nth-last-of-type
+  -> 선택된 형제 요소 중 뒤에서 n(0,1,2,....) 번째 선택
+*/
+
+#test2 > p:nth-last-of-type(2){
+  background-color: hotpink;
+}
+
+
+#test3 > li:not(:nth-child(3n)){
+  background-color: pink;
+}
