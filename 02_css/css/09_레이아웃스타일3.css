@@ -6,7 +6,11 @@
 }
 
 *{
-  /* content + */
+  /* width/height 지정한 값이
+    content + padding + border 값이 되도록
+    content 크기를 자동 조정하는 속성
+    -> 개발자 의도대로 요소 크기를 쉽게 지정 가능
+  */
   box-sizing: border-box;
   /* html요소는 기본적으로 설정된 padding,margin이 있는 요소가 존재 
     -> 개발자 의도대로 요소 배치가 안되는 문제가 생길 수 있다!
@@ -148,7 +152,7 @@ html{
   background-color: purple;
   color: white;
   font-weight: bold;
-  font-family: 'wingdings';
+  font-family: 'HakgyoansimByeolbichhaneulTTF-B';
   padding: 100px 20px 30px;/* 상/좌우/하 */
 
   /* 요소가 화면을 벗어나는 순간  fixed */
