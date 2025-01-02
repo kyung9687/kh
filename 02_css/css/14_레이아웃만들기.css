@@ -1,0 +1,84 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+div, header, main, footer, section{
+  border: 1px solid black;
+}
+
+
+body{
+  display: flex;
+  flex-direction: column;
+
+  /* 최소 높이 : 화면 높이의 100% 
+    -> 내부 요소가 화면 높이 100%를 초과하면
+       스크롤이 생성되며 늘어남
+    -> 내부 요소가 화면 높이 100% 미만이면
+       body 태그가 화면 높이 100%로 height 유지
+  */
+  min-height: 100vh;
+}
+
+
+header{
+  height: 200px;
+  flex-grow: 0;/* 기본값 */
+  display: flex;
+}
+
+main{
+
+  flex-grow: 1;/* 너만 팽창해 */
+}
+footer{
+  height: 200px;
+  flex-grow: 0;/* 기본값 */
+}
+
+
+.header-1, .header-3{
+  width:300px;
+}
+
+.header-2{
+  flex-grow: 1;
+}
+
+header > section{
+  font-size: 64px;
+  font-weight: bold;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+main{
+  display: flex;
+  flex-direction: row;/* 기본값 */
+  align-items: stretch;/* 기본값 */
+}
+
+main > section{
+  width: 50%;
+}
+
+.content-2{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.content-2>div:first-child{
+ height: 40%;/* 부모 높이의 40% */
+}
+
+.content-2>div:last-child{
+  /* height: 60%; */
+  flex-grow: 1;
+ }
