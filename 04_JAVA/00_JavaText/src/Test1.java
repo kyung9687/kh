@@ -14,6 +14,13 @@ public class Test1 {
 		System.out.println("자꾸 그러지마...");
 		System.out.println("타자 연습좀해 !!");
 		System.out.println("으잉!");
+		
+		
+		/*
+		 * java api doc java
+		 * 
+		 */
+		
 	}
 
 }
