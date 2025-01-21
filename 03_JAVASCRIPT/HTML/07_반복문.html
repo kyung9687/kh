@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>07_반복문</title>
+</head>
+<body>
+  
+  <h1>for문</h1>
+  <pre>
+    - 프로그램의 흐름을 제어하는 제어문 중 하나
+
+    - 특정 코드를 반복 수행할 때 사용하는 구문
+
+    - 끝이 정해져 있는 반복에서 주로 사용
+    ex) 운동장 10바퀴 돌기
+       -> 반복할 횟수가 정해져 있음
+
+
+    [작성법]
+
+    for([1]초기식 ; [2]조건식 ; [4]증감식){
+
+      // [3] 조건식이 true일 경우 수행할 코드;
+    }
+
+    * 처음 for문이 수행 될 때만 [1] 초기식을 수행
+      -> 두 번째 반복부터는 [2],[3],[4] 만 반복 
+
+
+    초기식 : for문을 제어하는 용도의 변수 선언
+
+    조건식 : for문의 반복 여부를 지정하는 식
+          
+          - true일 때 반복, 
+            false가 되는 순간 바로 반복(for) 종료
+          
+          - 보통 초기식에 사용된 변수를 이용해서
+            조건식을 작성함
+
+    증감식 : 초기식에 사용된 변수 값을 변환 시키는 식
+
+          - 변환된 초기식에 의해서 조건식의 결과가 달라지게 함
+  </pre>
+
+  <h4>콘솔에 12345 출력하기</h4>
+  <button onclick="check1()">확인 1</button>
+
+  <h4>콘솔에 1부터 10까지 1씩 증가하며 출력하기</h4>
+  <button onclick="check2()">확인 2</button>
+
+  <h4>콘솔에 5부터 13까지 1씩 증가하며 출력하기</h4>
+  <button onclick="check3()">확인 3</button>
+  
+  <h4>1부터 7까지 1씩 증가한 문자열을 한 줄로 출력하기</h4>
+  <button onclick="check4()">확인 4</button>
+
+
+  <h4>4부터 11까지 1씩 증가한 문자열을 한 줄로 출력하기</h4>
+  <!-- 4567891011 -->
+  <button onclick="check5()">확인 5</button>
+  
+  <h4>1부터 10까지 1씩 증가한 숫자의 합 구하기</h4>
+  <button onclick="check6()">확인 6</button>
+
+
+  <h4>입력 받은 값 사이 정수 값들의 합 구하기</h4>
+  입력 1 : <input type="number" id="input7a">
+  <br>
+  입력 2 : <input type="number" id="input7b">
+  <br>
+  <button onclick="check7()">확인 7</button>
+  
+  
+  <h4>1부터 10까지 2씩 증가한 숫자 출력 + 합계 구하기</h4>
+  <button onclick="check8()">확인 8</button>
+  
+  
+  <h4>3부터 30까지 3의 배수만 출력하기</h4>
+  <button onclick="check9()">확인 9</button>
+  
+  
+  <h4>입력 받은 범위 내 지정된 수의 배수를 출력(한 줄), 합계 구하기</h4>
+  <div>
+    시작 : <input type="number" id="start10">
+  </div>
+  <div>
+    종료 : <input type="number" id="end10">
+  </div>
+  <div>
+    배수 : <input type="number" id="multiple10">
+  </div>
+  <button onclick="check10()">확인 10</button>
+
+
+  <hr>
+  <h4>구구단 2단 출력하기</h4>
+  <pre>
+    2 x 1 = 2
+    2 x 2 = 4
+    2 x 3 = 6
+    ....
+    2 x 9 = 18
+  </pre>
+  <button onclick="check11()">확인 11</button>
+
+
+  <h4>입력 받은 단의 구구단 출력하기</h4>
+  <pre>
+    - 단이 입력되지 않으면 
+      -> alert("단을 입력 해주세요");  출력 후 함수 종료
+    
+    - 입력된 단이 2 ~ 9단이 아니면
+      -> alert("2 ~ 9단 사이만 입력 해주세요");  출력 후 함수 종료
+  </pre>
+
+  <div>
+    단 입력 : <input type="number" id="dan12">
+    <button onclick="check12()">확인 12</button>
+  </div>
+
+
+  <h4>10부터 1까지 1씩 감소하며 출력하기</h4>
+  <button onclick="check13()">확인 13</button>
+
+
+  <h4>20부터 3까지 3씩 감소하며 출력하기</h4>
+  <button onclick="check14()">확인 14</button>
+
+
+  <h4>구구단 3단 거꾸로 출력하기</h4>
+  <pre>
+    3 x 9 = 27
+    3 x 8 = 24
+    ...
+    3 x 1 = 3
+  </pre>
+  <button onclick="check15()">확인 15</button>
+
+  <h4>5의 배수마다 @, 10의 배수마다 줄바꿈하면서 출력하기(1~30)</h4>
+
+  <pre>
+    [결과 화면]
+    1 2 3 4 @ 6 7 8 9 @
+    11 12 13 14 @ 16 17 18 19 @
+    21 22 23 24 @ 26 27 28 29 @
+
+    [tip]
+    요소.innerText = "내용";
+     -> 요소 내부에 내용이 그대로 작성되어 출력
+    
+    요소.innerHTML = "내용";
+     -> 요소 내부에 내용이 그대로 작성되어 출력
+        + html 태그 또는 특수문자가 해석됨
+  </pre>
+
+  <button onclick="check16()">확인 16</button>
+  <p id="result16" 
+    style="border: 1px solid black; height: 100px; width: 300px;"></p>
+
+
+  <hr>
+  <h1>중첩 반복문 (2중 for문)</h1>
+
+  <pre>
+    - 반복문 내에 반복문이 작성된 형태
+
+    for(초기식1 ; 조건식1 ; 증감식1){
+      for(초기식2 ; 조건식2 ; 증감식2){
+
+      }
+    }
+  </pre>
+
+  <h4>다음 모양 출력하기</h4>
+  <pre>
+    1234
+    1234
+    1234
+  </pre>
+  <button onclick="check17()">확인 17</button>
+
+  <h4>다음 모양 출력하기</h4>
+  <pre>
+    12345
+    12345
+    12345
+    12345
+  </pre>
+  <button onclick="check18()">확인 18</button>
+
+  <h4>다음 모양 출력하기</h4>
+  <pre>
+    654321
+    654321
+    654321
+  </pre>
+  <button onclick="check19()">확인 19</button>
+
+  <h4>다음 모양 출력하기</h4>
+  <pre>
+    1
+    12
+    123
+    1234
+    12345
+  </pre>
+  <button onclick="check20()">확인 20</button>
+
+
+  <h4>다음 모양 출력하기</h4>
+  <pre>
+    3
+    34
+    345
+    3456
+    34567
+  </pre>
+  <button onclick="check21()">확인 21</button>
+
+  <h4>다음 모양 출력하기</h4>
+  <pre>
+    *
+    **
+    ***
+  </pre>
+  <button onclick="check22()">확인 22</button>
+
+  <h4>입력 받은 숫자 만큼의 * 모양 삼각형 출력하기</h4>
+  <pre>
+    입력 : 5
+
+    (콘솔)
+    *
+    **
+    ***
+    ****
+    *****
+  </pre>
+
+  <div>
+    입력 : <input type="number" id="input23">
+    <button onclick="check23()">확인 23</button>
+  </div>
+
+
+
+  <h4>다음 모양 출력하기</h4>
+  <pre>
+    ****
+    ***
+    **
+    *
+  </pre>
+  <button onclick="check24()">확인 24</button>
+
+  
+  <hr>
+  <h1>반복문을 활용할 수 있는 기술</h1>
+  <pre>
+    - 숫자 누적(합계, sum)
+    - 문자열 누적(이어쓰기)
+    - 숫자 세기(count)
+  </pre>
+
+  <h4>1부터 30 사이의 정수 중 4의 배수는 몇개?</h4>
+  <button onclick="check25()">확인 25</button>
+
+  <h4>1부터 100사이의 정수 중 입력 받은 값의 배수는 몇개?</h4>
+  <div>
+    <input type="number" id="input26">
+    <button onclick="check26()">확인 26</button>
+  </div>
+
+  <hr>
+  <h4>count를 이용해 숫자 부여하기</h4>
+  <pre>
+    1 2 3 4
+    5 6 7 8
+    9 10 11 12
+
+    (3행 4열)
+  </pre>
+  <button onclick="check27()">확인 27</button>
+
+
+  <hr>
+  <h1>while문 (조건식이 true인 동안 반복)</h1>
+
+  <pre>
+    - 끝이 정확히 정해져있지 않은 경우 사용하는 반복문
+     -> 몇회를 반복할지 모르는 경우
+
+    [작성법]
+    while(조건식){
+      // 조건식이 true인 경우 수행할 코드;
+    }
+
+    // 반복 될 때마다 조건식 검사
+    // true -> 반복 O
+    // false -> 반복 종료
+  </pre>
+
+  <h4>prompt를 이용해서 입력 받은 숫자 모두 더하기</h4>
+  <pre>
+    단, 취소 입력 시 추가 입력을 받지 않고
+    누적된 합계를 alert로 출력
+  </pre>
+
+  <button onclick="check28()">시작</button>  
+
+  <hr>
+
+  <h3>메뉴 주문하기</h3>
+  <ol>
+    <li>김밥 : 4000</li>
+    <li>라면 : 4500</li>
+    <li>돈까스 : 9000</li>
+  </ol>
+  <strong style="color:red">취소 클릭 시 주문 완료</strong>
+  <button onclick="check29()">주문하기</button>
+
+  <h4>주문 내역</h4>
+  <ul id="result29" style="height: 200px;">
+    <li>김밥(1개) : 4000원</li>
+    <li>라면(2개) : 9000원</li>
+    <li>돈까스(1개) : 9000원</li>
+    <li>합계 : 22000원</li>
+  </ul>
+  
+  <script src="../js/07_반복문.js"></script>
+</body>
+</html>

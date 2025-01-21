@@ -1,0 +1,203 @@
+strong{
+  color: steelblue;
+  font-size: 18px;
+  text-decoration: underline;
+  font-family: '맑은 고딕';
+}
+
+code{
+  background-color: #f5e7b2;
+  display: block;/* 요소의 형식을 block 형식(행 분할) 으로 변경 */
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* 기본 속성 선택자 1- 속성명 */
+[name]{ background-color: cyan;}
+
+/* 기본 속성 선택자2 - 속성명 = 속성값 */
+[name=bbb]{ font-size: 20px;}
+[name= "bbb" ]{text-decoration: underline;}
+
+/* 자식 선택자( A > B) */
+
+/* class 속성 값이 "parent-1"인 요소의 자식 중 
+  li태그를 모두 선택*/
+
+.parent-1> li{
+  font-size: 24;
+}
+
+/*  class속성 값이 "parent-1"인 요소의 자식 중
+    class속성 값이 "child-1"인 모든 요소 선택 */
+.parent-1 > .child-1{
+  background-color: yellow;
+}
+
+.parent-1> li > span{
+  background-color: red;
+}
+/* 후손 선택자 (A B) */
+
+/* class가 patent-2 인 요소 하위 모든 p태그 선택 */
+.parent-2 p{background-color: lightcoral;}
+
+/* class가 patent-2 인 요소 하위 모든 태그 선택 */
+.parent-2 *{
+ font-family: '궁서체';
+}
+
+/* 반응 선택자 */
+
+.test-btn{
+
+  width: 300px;
+  height:50px;
+  font-size:  30px;
+  font-weight: bold;
+
+  cursor: pointer;/* 마우스 포인터 모양을 손가락으로 변경 */
+  background-color: white;
+  color: deeppink;
+  border: 2px solid deeppink;
+}
+
+/* hover 반응 선택자 */
+.test-btn:hover{
+ background-color: deeppink;
+ color: white;
+}
+
+.test-btn:active{
+  transform:  scale(0.9);/*  /크기를 90%로 변환 */
+}
+
+/* :focus 상태 선택자 */
+.input-1:focus{
+  background-color: lightgreen;
+}
+
+/* :checked 상태 선택자  */
+
+/* input 요소 중 namedl radioGroup 이면서 체크된 요소만 선택 */
+[name= "radioGroup"]:checked{
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  color: red;
+  /* 체크 시 보여지는 ㅍ시는 이미지 -> 색상 적용 x */
+  /* 최근에 변경 css 추가됨 */
+}
+
+/* 체크된 체크박스만 선택 */
+input[name=checkGroup]:checked{
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  color: red;
+}
+
+.input-3:enabled{
+  background-color: yellowgreen;
+}
+
+.input-3:disabled{
+  background-color: salmon;
+}
+
+/* 동위 선택자 */
+/* A + B : A 바로 뒤에 B 형제 요소 1개 선택 */
+#div1 + div{/*  id 가 "dic1"인 요소 바로 뒤 div 요소 선택  */
+  background-color: #AF47D2;
+}
+
+#div4 + p{
+  background-color: #cccccc;
+}
+
+/* A ~ B : A 다음에 존재 하는 모든 B 형제 요소 선택 */
+#div3 ~ div{
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+#div1 ~ div{
+  color: red;
+}
+
+input[name=radioDeco]{
+  /* 브라우저 기본 스타일 제거 */
+  appearance: none;
+
+  width: 20px;
+  height: 20px;
+
+  border: 2px solid #cccccc;
+
+  /* 모서리 곡률 지정 */
+  border-radius: 50%;
+
+  background-color: white;
+  
+  /* 마우스 손가락 모양 */
+  cursor: pointer;
+}
+
+input[name=radioDeco]:checked{
+  background-color: orange;
+  border-color: orange;
+}
+input[name=checkDeco]{
+  /* 브라우저 기본 스타일 제거 */
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #cccccc;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+/* 체크된 경우 */
+input[name=checkDeco]:checked{
+  background-color: green;
+  border-color: green;
+  position: relative; /* 위치 기준 */
+}
+
+
+/* 체크된 요소에 */
+input[name=checkDeco]:checked::before{
+  content: '✔';
+  color: white;
+  position: absolute;
+  left: 2px;
+  bottom: -2px;
+  font-size: 16px;
+}
+
+/* 이미지를 이용해서 checkbox 꾸미기 */
+
+/* 감싸고 있는 label */
+.check-test{
+  width: 20px;
+  height: 20px;
+  border: 2px solid #cccccc;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 5px;
+
+}
+
+.check-test >input[type="checkbox"]{
+  display: none;
+}
+
+/* 체크된 체크박스 다음에 존재하는 div 선택 */
+.check-test >input[type="checkbox"]:checked + div{
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/checkbox.png');
+  background-size: cover;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 관련 태그</title>
+</head>
+<body>
+    <h1>img 태그</h1>
+    <pre>
+			[속성]
+			(속성 : 시작태그에 작성하는 속성)
+			1. src : 삽입할 이미지의 경로를 작성하는 속성
+							(파일 위치, 인터넷 주소(url))
+			2. width / height : 너비 / 높이를 지정하는 속성
+							(단위 : px,%, em, rem 등이 존재)
+			3. alt :이미지 설명을 작성하는 속성
+							1)지정된 경로에 이미지가 없을 때 보여줄 내용 작성
+							2) 웹 접근성(시각 장애인, 노인등을 위한 이미지 설명)
+    </pre>
+
+		<hr>
+		<h3>img 태그 기본 사용법</h3>
+		<img src="images/dogs/dog1.jpg" alt="1번 강아지 이미지">
+		<!--  -->
+		<img src="https://blog.kakaocdn.net/dn/drq9jc/btr5DUtmPbq/0SeiEvANaE5tVcWQ62kftk/img.gif" alt="이게 클릭이야">
+
+		<hr>
+
+		<h3>이미지 크기 지정 (width/height)</h3>
+
+		<img src="images/cats/cat1.jpg" alt="1번 고양이 이미지"'
+		width="400px"
+		height="280px">
+
+		<hr>
+
+		<h2>고정 크기 단위</h2>
+
+		<pre>
+			- 화면의 크기가 변해도 항상 고정된 크기를 지님
+			- 단위 :px
+		</pre>
+		<img src="images/dogs/dog1.jpg" alt="개1" width="300px" height="240px">
+		<img src="images/dogs/dog2.jpg" alt="개2" width="300px" height="240px">
+		<img src="images/dogs/dog3.jpg" alt="개3" width="300px" height="240px">
+		<img src="images/dogs/dog4.jpg" alt="개4" width="300px" height="240px">
+		<img src="images/dogs/dog5.jpg" alt="개5" width="300px" height="240px">
+
+		<hr>
+
+		<h2>가변 크기 단위</h2>
+		<pre>
+			- 브라우저 크기 또는 지정된 영역의 크기에 대한
+				상대적인 크기 단위
+			
+			- 단위 :% em, rem 등
+		</pre>
+		<img src="images/flowers/flower1.jpg" width="15%" height="240px">
+		<img src="images/flowers/flower2.jpg" width="15%" height="240px">
+		<img src="images/flowers/flower3.jpg" width="15%" height="240px">
+		<img src="images/flowers/flower4.jpg" width="15%" height="240px">
+		<img src="images/flowers/flower5.jpg" width="15%" height="240px">
+
+		<hr>
+
+		<h2>고정된 크기의 영역내부에 가변 크기 이미지</h2>
+
+		<div
+		style="border: 1px solid black; width: 800px; height: 250px; display: flex;">
+			<img src="images/cats/cat1.jpg" width="25%" height="80%">
+			<img src="images/cats/cat2.jpg" width="25%" height="80%">
+			<img src="images/cats/cat3.jpg" width="25%" height="80%">
+			<img src="images/cats/cat4.jpg" width="25%" height="80%">
+
+		</div>
+</body>
+</html>

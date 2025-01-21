@@ -1,0 +1,38 @@
+.flex-container{
+  
+
+  /*
+    viewport : 현재 화면이 보여지고 있는 영역
+      (브라우저, 스마트폰 태블릿 등 기기 화면)
+
+    vh(viewport height) :
+    - 현재 화면 높이 비례 단위
+    - 100vh == 화면 높이 100%
+
+    vW(viewport width)
+    - 현재 화면 너비 비례 단위
+    - 100vw == 화면 너비 100%
+  */
+  height: 75vh; /* 화면 높이 75% */
+
+  margin:  30px 20px;
+  display: flex;
+
+  /* flex-wrap :item을 한 줄 / 여러줄로 배치하는 속성 */
+
+  /* 기본값(한줄) */
+  flex-wrap: wrap;
+
+  /* flex-wrap: wrap-reverse; */
+
+  /* flex-flow: column wrap; */
+
+  justify-content: center;
+
+  align-items: center;
+
+  /* align-content
+    -교차축 방향으로 item 묶음(wrap)전체를 정렬하는 속성
+  */
+  align-content: space-evenly;
+}

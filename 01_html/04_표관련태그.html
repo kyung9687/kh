@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04_표관련태그</title>
+		
+		<!-- style태그 : css(html 꾸미기) 코드를 작성하는 태그 -->
+		<style>
+			/* css주석 */
+			/* 문서 내에서 thead 태그를 모두 찾아 선택 */
+			table{
+				text-align: center;
+			}
+			thead{
+				background-color: yellow;
+			}
+			tbody{
+				background-color: skyblue;
+			}
+			tfoot{
+				background-color: magenta;
+			}
+		</style>
+</head>
+<body>
+	<ol>
+		<li>
+			<pre>
+-	웹 문서에서
+	자료를 정리하기 위해
+	사용하는 태그
+
+
+-	table 태그는
+	행, 열을 작성하기 위한
+	영역(판)을 지정하는 태그
+			</pre>
+		</li>
+		<li>
+			<h4>tr(table row) 태그</h4>
+			<pre>
+-	테이블의 한 행을 나타내는 태그
+			</pre>
+		</li>
+		<li>
+			<h4>td(table Date) 태그</h4>
+			<pre>
+-	테이블에 출력될 값(데이터)을
+	작성하는 태그
+-	각행의 열(column)역할
+	== excel의 한 cell(한 칸)과 동일
+			</pre>
+		</li>
+
+	</ol>
+	<hr>
+<li>
+	<h4>th(Table) 태그</h4>
+	<pre>
+		- 열의 제목을 나타내는 태그
+
+		- td와 같은 레벨로 작성(td 대신 th 작성 가능)
+		
+		- 굵은 글씨 + 가운데 정렬
+	</pre>
+</li>
+
+<li>
+	<h4>caption 태그</h4>
+	<pre>
+		- 표 또는 이미지의 설명을 작성하는 태그
+	</pre>
+</li>
+
+<li>
+	<h4>thead 태그</h4>
+	<pre>
+		- 테이블 상단 영역(컬럼 제목 영역)
+	</pre>
+</li>
+<li>
+	<h4>tbody 태그</h4>
+	<pre>
+		- 테이블 중단 영역(값 작성 영역)
+	</pre>
+</li>
+<li>
+	<h4>tfoot 태그</h4>
+	<pre>
+		- 테이블 하단 영역(합계 작성 영역)
+	</pre>
+</li>
+<li>
+	<h4>colspan(열 병합) 속성</h4>
+	<pre>열로 나열된 방향(가로,옆) 병합</pre>
+</li>
+<li>	
+	<h4>rowspan(행 병합) 속성</h4>
+	<pre>행으로 나열된 방향(세로,위/아래) 병합</pre>
+</li>
+
+<hr>
+
+	<h3>테이블 연습1</h3>
+	<table border="1" style="border-collapse: collapse;">
+		<!-- 1행 -->
+		<tr>
+			<td>1행 1열</td>
+			<td>1행 2열</td>
+			<td>1행 3열</td>
+		</tr>
+		<tr>
+			<td>2행 1열</td>
+			<td>2행 2열</td>
+			<td>2행 3열</td>
+		</tr>
+		<tr>
+			<td>3행 1열</td>
+			<td>3행 2열</td>
+			<td>3행 3열</td>
+		</tr>
+	</table>
+
+	<hr>
+
+	<h3>테이블 연습2</h3>
+	<table border="1">
+		<caption style="caption-side:bottom;">짱구는 못말려 등장 인물</caption>
+		<tr>
+			<th>번호</th>
+			<th>이름</th>
+			<th>성별</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>짱구는 못말려</td>
+			<td>M</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>훈이</td>
+			<td>M</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>유리</td>
+			<td>F</td>
+		</tr>
+	</table>
+
+	<hr>
+
+	<h3>테이블 연습 3</h3>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>이름</th>
+				<th>나이</th>
+				<th>주소</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>홍길동</th>
+				<th>25세</th>
+				<th rowspan="3">서울시 중구</th>
+			</tr>
+			<tr>
+				<th>김미영</th>
+				<th>23세</th>
+			</tr>
+			<tr>
+				<th>박철수</th>
+				<th>32세</th>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<th>인원 수</th>
+				<td colspan="2">3명</td>
+			</tr>
+		</tfoot>
+
+	</table>
+</body>
+</html>
