@@ -1,6 +1,5 @@
 package service;
 
-import java.util.Iterator;
 import java.util.Random;
 
 import dto.StudentDTO;
@@ -51,8 +50,102 @@ public class StudentService {
 		return students;
 	}
 	
+	public boolean addStudent(StudentDTO student) {
+		for (int i = 0; i < students.length; i++) {
+			if (students[i] == null) {
+				students[i] =student;
+				return true;
+			}
+		}
+		
+		return false;
+	}
 	
 	
+	public StudentDTO selectIndex(int index) {
+		
+		if(index <0|| index >= students.length) {
+			return null;
+		}
+		return students[index];
+		
+		
+	}
 	
 	
+	public StudentDTO selectName(String targetName) {
+		
+		for(StudentDTO std : students) {
+			if(std == null) {
+				return null;
+			}
+		
+		if (std.getName().equals(targetName)) {
+			return std;
+		}
+		}
+		return null;
+	}
+	
+	public int checkIndex(int index) {
+		
+		if (index <0|| index >= students.length) {
+			return 1;
+		}
+		
+		if (students[index] == null) {
+			return 2;
+		}
+		return 3;
+	}
+	
+	public void updateScore(int index,int html,int css, int js,int java) {
+		
+		students[index].setHtml(html);
+		students[index].setCss(css);
+		students[index].setJs(js);
+		students[index].setJava(java);
+		
+		
+		
+	}
+	
+	public String selectMaxMin() {
+		
+		String maxName = null;
+		double MaxAvg = 0.0;
+		
+		
+		String minName = null;
+		double MinAvg = 100.0;
+		
+		for(StudentDTO std : students) {
+			if(std == null) {
+				break;
+			}
+			
+			
+			
+		}
+		return null;
+		
+		
+	}
+
+	public String deleteStudent(int index) {
+		
+		String studentName = students[index].getName();
+		
+		students[index] = null;
+		
+		for (int i = index; i < students.length; i++) {
+			students[i] = students[i+1];
+		}
+		students[students.length-1]= null;
+		
+		return studentName;
+		
+		
+		
+	}
 }
