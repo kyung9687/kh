@@ -1,6 +1,5 @@
 package common;
 
-<<<<<<< HEAD
 // import (가져오다) : 다른 패키지에 존재하는 클래스를 가져오는 구문
 import java.util.Scanner;
 
@@ -48,13 +47,3 @@ public class ScannerEx1 {
 	
 	
 }
-=======
-public class ScannerEx1 {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-	}
-
-}
->>>>>>> bb9ad8c6276bde6ecfb7535fd463c8b1e0490894
