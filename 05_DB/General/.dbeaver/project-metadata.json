@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"resources":{"Scripts/01_SELECT.ㄴ비":{"default-datasource":"oracle_thin-1951c3da684-672664f05eaac2b3","default-schema":"KH06_KDY"},"Scripts/Script.sql":{"default-datasource":"oracle_thin-1951c181070-6e45cef66502686f","default-schema":"SYSTEM"}}}
+=======
+{"resources":{"Scripts/Script-1.sql":{"default-datasource":"oracle_thin-1951c3da684-672664f05eaac2b3","default-schema":"KH06_KDY"},"Scripts/Script.sql":{"default-datasource":"oracle_thin-1951c181070-6e45cef66502686f","default-schema":"SYSTEM"}}}
+>>>>>>> bb9ad8c6276bde6ecfb7535fd463c8b1e0490894

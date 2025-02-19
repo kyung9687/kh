@@ -7,6 +7,10 @@ public class JavaTest {
 
     for(int i=1 ; i<=5 ; i++){
       System.out.println(i+"번째 줄 출력");
+<<<<<<< HEAD
+=======
+      
+>>>>>>> bb9ad8c6276bde6ecfb7535fd463c8b1e0490894
     }
   }
 }
