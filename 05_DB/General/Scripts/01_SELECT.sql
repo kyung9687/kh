@@ -79,3 +79,22 @@ SELECT
 EMP_ID ,EMP_NAME ,EMP_ID ||EMP_NAME 
 FROM
 EMPLOYEE 
+
+/* 리터럴 : 값(data)을 표기하는 방식
+ * -number 타입
+ * char , varchar2 타입
+ * select절에 리터럴을 작성하면 조회 결과 모든행에 리터럴이 추가된다*/
+
+SELECT SALARY ,'원',SALARY ||'원' AS 급여
+FROM EMPLOYEE 
+
+/* distinct(별개의 전혀다른)
+ * 
+ */
+
+SELECT 
+	DISTINCT DEPT_CODE 
+FROM
+	EMPLOYEE 
+
+
