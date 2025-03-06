@@ -197,8 +197,6 @@ MAXVALUE  200 ;
 -- VIEW, SEQUENCE 삭제
 
 
-
-
 ------------------------------------------------------------------------
 
 /* INDEX(색인)
@@ -249,3 +247,10 @@ WHERE TEST_ID  ='TEST500000';
 
 SELECT * FROM TB_IDX_TEST
 WHERE TEST_NO  =500000; 
+
+
+SELECT e.EMP_ID ,e.EMP_NAME ,d.DEPT_TITLE ,j.JOB_NAME 
+FROM EMPLOYEE E 
+JOIN DEPARTMENT D on(e.DEPT_CODE =d.DEPT_ID) 
+JOIN JOB J ON(e.JOB_CODE=j.JOB_CODE) 
+WHERE d.DEPT_TITLE = '총무부' ORDER BY e.DEPT_CODE ASC;

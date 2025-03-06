@@ -75,26 +75,6 @@
 					"include": ["WORKBOOK"]
 				}
 			]
-		},
-		"oracle_thin-1954526f6a6-7b9f983b3e2c5a08": {
-			"provider": "oracle",
-			"driver": "oracle_thin",
-			"name": "112.221.156.34",
-			"save-password": true,
-			"configuration": {
-				"host": "112.221.156.34",
-				"port": "12345",
-				"database": "XE",
-				"url": "jdbc:oracle:thin:@//112.221.156.34:12345/XE",
-				"configurationType": "MANUAL",
-				"type": "dev",
-				"closeIdleConnection": true,
-				"provider-properties": {
-					"@dbeaver-connection-type@": "BASIC",
-					"@dbeaver-sid-service@": "SERVICE"
-				},
-				"auth-model": "oracle_native"
-			}
 		}
 	},
 	"saved-filters": [
